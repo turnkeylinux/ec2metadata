@@ -10,6 +10,7 @@ Standards-Version: 4.0.0
 Package: ec2metadata
 Architecture: any
 Depends:
+ ${misc:Depends},
  python (>= 2.4),
 Section: misc
 Description: Query and display EC2 metadata related to the AMI instance
