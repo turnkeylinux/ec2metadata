@@ -1,18 +1,23 @@
 Source: ec2metadata
 Section: misc
 Priority: optional
-Maintainer: Alon Swartz <alon@turnkeylinux.org>
+Maintainer: Jeremy Davis <jeremy@turnkeylinux.org>
 Build-Depends:
  debhelper (>> 10),
- dh-python,
- python-all (>= 2.6.6-3~),
- turnkey-pylib (>= 0.3),
 Standards-Version: 4.0.0
-X-Python-Version: >= 2.6
 
 Package: ec2metadata
 Architecture: any
 Depends:
- ${misc:Depends},
- ${python:Depends},
-Description: Query and display EC2 metadata related to the AMI instance
+ cloud-guest-utils
+Description: Allow ec2metadata (from cloud-guest-utils) to be imported as py3 module
+ ec2metadata was originally developed by Alon Swartz (TurnKey GNU/Linux) but has since been
+ adopted by Cannonical for inclusion in the Ubuntu "cloud-guest-utils'[1] package. The
+ Ubuntu version of ec2metadata has since been maintained (inc updated to py3), plus
+ backported into Debian[2].
+ .
+ This package now only contains a symlink so that ec2metadata can be imported as a python
+ module.
+ .
+ [1] https://github.com/canonical/cloud-utils/blob/main/bin/ec2metadata
+ [2] https://tracker.debian.org/pkg/cloud-utils
