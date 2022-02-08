@@ -6,10 +6,13 @@ Build-Depends:
  debhelper (>> 10),
 Standards-Version: 4.0.0
 
-Package: ec2metadata
+Package: tkl-ec2metadata
 Architecture: any
 Depends:
  cloud-guest-utils
+Breaks: ec2metadata (<<0+2022~)
+Replaces: ec2metadata (<<0+2022~)
+Conflicts: ec2metadata (<<0+2022~)
 Description: Allow ec2metadata (from cloud-guest-utils) to be imported as py3 module
  ec2metadata was originally developed by Alon Swartz (TurnKey GNU/Linux) but has since been
  adopted by Cannonical for inclusion in the Ubuntu "cloud-guest-utils'[1] package. The
