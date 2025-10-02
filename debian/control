@@ -7,7 +7,7 @@ Build-Depends:
 Standards-Version: 4.0.0
 
 Package: tkl-ec2metadata
-Architecture: any
+Architecture: all
 Depends:
  cloud-guest-utils
 Breaks: ec2metadata (<<0+2022~)
